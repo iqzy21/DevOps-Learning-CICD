@@ -155,4 +155,55 @@ this feedback loop is cruicial for stable mantencence
 you can aways go back to previous stagers for example when an error needs to be fixed 
 <img width="803" height="450" alt="image" src="https://github.com/user-attachments/assets/7a4611f5-43d3-4b79-bbe1-f733f8948214" />
 
+#Github Actions & CI/CD Workflow
+first you have your code you fix bugs develop ect
+seconnd you commit to repo the commit triggers a github actions workflow 
+The work flow is defined by a YAML file and it specifies what actions to take at certain events like commit 
+then the pipeline starts 
+work flow enters ci pipline 
+code is built and dependencies are installed
+code is tested the tets check that the new code works with the current state and ensure there are no bugs
+crucialy for  maintining code quality test outocme is checked
+code is packaged when test and build passes and makes a new deployment lof your application ect 
+<img width="750" height="442" alt="image" src="https://github.com/user-attachments/assets/a7f8afca-3bf5-4d75-9f5a-540c0070e3f9" />
+
+# Use cases for Github Actions
+github actions is a tool that can automatate various aspects of dev work flow
+conitnues intergration = github actions can build and test code automaticly everytime its pushed to repo
+ennsures code is in good stage and works and that any issues are caugh early
+a real example is having a unit tests on every pull request to ensure code doesnt break exisiting functioinality 
+continues deployment = after tests are pass github actions can automatic cly deploy updates this speeds up deploying by limiting manual deployment 
+example is deploying an application on a cloud service and this can be set to after passing all tests for quick and reliable releases
+automation = github axtions can automate repetitive tasks in work flow 
+en example wopuld be managing project board automation such as moving tasks on a github prioject bourd 
+ <img width="502" height="210" alt="image" src="https://github.com/user-attachments/assets/0d80e746-f3a5-4e31-8d6e-0be082677d3c" />
+
+# Creating Github repo for CI/CD
+
+<img width="668" height="275" alt="image" src="https://github.com/user-attachments/assets/5a995271-4954-42a9-a1cd-6aac19a6c79e" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
