@@ -192,8 +192,37 @@ lists = sequences of items uses - to lists exampokne -item1,-item,-item3
 nbested elements = you can nest using indentation example parent: chiled:value
 <img width="809" height="411" alt="image" src="https://github.com/user-attachments/assets/9bbff666-1385-4459-ba72-b1a711735c78" />
 
+# Introduction to YAML Syntax
+#key value pairs
+name: iqzy
+age: 30
+job: dev
 
+#lists
+fruits:
+- apple
+- bamama
+- cherery
 
+#nested elements
+address:
+  street: 12 dowbning street
+  city: londin
+  country: uk 
+
+  #pipe lines
+  work flow syntax and structure
+
+  name = name of yout work flow
+  trigger = on: triggers the work flow on any command for example push or pull request defines events that trigger work flow 
+  jobs = taks that run on the work flow 
+  uses build: and runs-on: 
+  runs-on: this is a environment where the work flow runs on and you can set an operating system like ubuntu-latest
+  steps: jobs are composed as steps each step runs as a command or actions. 
+  actions are reusable cod eythat can perform virety of task
+  <img width="791" height="449" alt="image" src="https://github.com/user-attachments/assets/1fbd3d4a-3091-458a-a087-987f5dd29548" />
+
+#Events, jobs and steps
 
 
 
