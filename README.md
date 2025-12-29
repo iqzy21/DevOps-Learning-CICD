@@ -182,9 +182,15 @@ en example wopuld be managing project board automation such as moving tasks on a
 
 <img width="668" height="275" alt="image" src="https://github.com/user-attachments/assets/5a995271-4954-42a9-a1cd-6aac19a6c79e" />
 
+#Introduction to YAML Syntax
+YAML = YAML aint markup language used witha lot of dev ops tools
+YAML is a human readable data serialisation standard that is often used for config files
 
-
-
+3 cocepts for yaml
+key-value pairs = basic building blocks of yaml written in format key: value eacmple name:age
+lists = sequences of items uses - to lists exampokne -item1,-item,-item3
+nbested elements = you can nest using indentation example parent: chiled:value
+<img width="809" height="411" alt="image" src="https://github.com/user-attachments/assets/9bbff666-1385-4459-ba72-b1a711735c78" />
 
 
 
