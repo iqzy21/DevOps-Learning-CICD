@@ -154,3 +154,5 @@ this feedback loop is cruicial for stable mantencence
 
 you can aways go back to previous stagers for example when an error needs to be fixed 
 <img width="803" height="450" alt="image" src="https://github.com/user-attachments/assets/7a4611f5-43d3-4b79-bbe1-f733f8948214" />
+
+
