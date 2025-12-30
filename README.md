@@ -245,9 +245,16 @@ after in github actions
 # Advanced Github Actions
 # Using conditions and expressions
 
-conditions 
+conditions = allow you to control when a job or step should run based on cvertain criterias
+expesrrions = provide a way to performm calculations, manipulate trips and more withnna work flow file
 
+example
+<img width="701" height="284" alt="image" src="https://github.com/user-attachments/assets/b444648c-f526-4bf2-9348-577438ef7c1d" />
 
+#Matrix builds and parallel testing
+matrix builds allow you to run multiple job configs in parralel and the matrix strategy is how u can do it in github actions 
+usefull for tesing in different environments 
+<img width="381" height="361" alt="image" src="https://github.com/user-attachments/assets/3f38e586-9917-4c03-838f-f9415a18a677" />
 
 
 
