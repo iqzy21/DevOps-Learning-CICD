@@ -302,21 +302,16 @@ Matrix builds allow you to run multiple job configurations in parallel using the
 
 ![Matrix Build Example](https://github.com/user-attachments/assets/3f38e586-9917-4c03-838f-f9415a18a677)
 
----
+#Secrets & Encrypted vars
+secrets = are sensitive pieces off information such as API keys, passwords or any credentials that you dont want to be eposed int he dide base 
+using secrets helps keep sensitive data secure out of the source code 
 
-## Quick Reference
+<img width="695" height="321" alt="image" src="https://github.com/user-attachments/assets/1dd47157-7014-4e3a-baf7-9f99371b7ad0" />
+#Using secrets securely in workflow
+two ways you can identify secrets
+by using a echo function  as shown in the immage 
+or a environment
+<img width="672" height="250" alt="image" src="https://github.com/user-attachments/assets/dd95f78d-2a1f-48bb-8bf6-0bce1c0a8bee" />
 
-### CI/CD Benefits Summary
-✅ Faster delivery of features  
-✅ Improved code quality  
-✅ Reduced deployment risk  
-✅ Better team collaboration  
-✅ Automated testing and deployment  
-✅ Consistent processes
 
-### Remember
-- Keep commits small and frequent
-- Write comprehensive tests
-- Monitor your pipelines
-- Use appropriate CI/CD tools for your team size
-- Automate everything you can
+
