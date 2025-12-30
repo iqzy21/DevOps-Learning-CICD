@@ -235,10 +235,17 @@ steps run sequentially within a job
 # Build a simple CI Pipeline
 <img width="803" height="208" alt="image" src="https://github.com/user-attachments/assets/cdbe5661-0fcf-4dfe-a626-79e8fbf623c2" />
 
+#cicd demo 
 
+heres an example of a pipeline 
+<img width="594" height="340" alt="image" src="https://github.com/user-attachments/assets/1600a837-c696-47d3-8918-679b6ea8e789" />
+after in github actions 
+<img width="647" height="675" alt="image" src="https://github.com/user-attachments/assets/b463d7ba-89c4-46c7-b3ed-98bd60aa9a94" />
 
+# Advanced Github Actions
+# Using conditions and expressions
 
-
+conditions 
 
 
 
