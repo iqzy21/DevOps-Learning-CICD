@@ -1,267 +1,322 @@
-#CICD
-#what is CICD
-CI = continus integration CI is about integrating cold changed frequently 
-if in a team and workiong on changhes instead of waiting for everyone to finish and merge 
-CI allows you to intergrate chnges several times a day being able to catch errors quickly
+# CI/CD Learning Guide
 
-CD = continues deployment or continues delivery 
-with continues deployment every change that passes the production stage of the pipeline is automatically released to users
-which means no more manual deployment 
-with continues delivery once code is intergrated it needs to stay in a deployable state this part makes sure that software can be released reliably at any time 
-CICD helpes teams work effiecently catch errors early and release updates quickly and saftley 
+## What is CI/CD?
 
-#Overview and Why we need CI/CD
-CICD pipe line is a series of steps that happen once a change is commited 
-rundown of pipeline
-commirt change = changes are pushed to github e.g code
-trigger build = the commit you pushed is triggered and sends an auto buld process
-build = code is compiled and all dependencies are assembled and built
-notify of buold outcome = once build is dont system notifies team wether build was successfull or failed
-ru tests = automated test that ensure changes dont break exising functiinality
-notify of test outcome = notifies team of test outcome 
-deliver build to staging = if tets passes the build is delivered to a straging environment for further testing 
-delpy to production = code is deployed to production environment where users can access it
-<img width="670" height="156" alt="image" src="https://github.com/user-attachments/assets/d5e4254f-6e5e-4380-b201-a4f2c0bad4c1" />
+### Continuous Integration (CI)
+CI is about integrating code changes frequently. Instead of waiting for everyone on a team to finish their work before merging, CI allows you to integrate changes several times a day, enabling you to catch errors quickly.
 
-why is cicd important 
-fast delivery = automating the integration and deployment processes means we can deliver new features much faster
-improved quality = by continusly testing and intergrating code we catch and fix bugs early
-reduce risks = small incrementation a deployments leads to less risk as eerrors can be dealt with on a smaller scale
-better collaberation = cicd encourages collaberation among team members everyones work is intgrated frequently 
+**Key benefits:**
+- Frequent code integration (multiple times per day)
+- Early error detection
+- Improved team collaboration
 
-<img width="675" height="191" alt="image" src="https://github.com/user-attachments/assets/2618664e-8e06-4ce5-9c28-f03761190422" />
+### Continuous Deployment/Delivery (CD)
 
-#popular CICD tools 
-🔧 Popular CI/CD Tools – Quick & Memorable
-GitLab CI/CD
+**Continuous Deployment:** Every change that passes all production stages of the pipeline is automatically released to users. No manual deployment required.
 
-Built directly into GitLab
+**Continuous Delivery:** Once code is integrated, it stays in a deployable state. This ensures software can be released reliably at any time.
 
-No extra tools needed if your code is already on GitLab
+**Bottom line:** CI/CD helps teams work efficiently, catch errors early, and release updates quickly and safely.
 
-Clean YAML pipelines
+---
 
-Strong default security and permissions
+## CI/CD Pipeline Overview
 
-Best for: Teams fully committed to GitLab
+A CI/CD pipeline is a series of automated steps that happen once a change is committed.
 
-Jenkins
+### Pipeline Stages
 
-Open source and extremely powerful
+1. **Commit Change** - Changes are pushed to version control (e.g., GitHub)
+2. **Trigger Build** - The commit triggers an automated build process
+3. **Build** - Code is compiled and dependencies are assembled
+4. **Notify Build Outcome** - System notifies team whether build succeeded or failed
+5. **Run Tests** - Automated tests ensure changes don't break existing functionality
+6. **Notify Test Outcome** - Team is notified of test results
+7. **Deliver to Staging** - If tests pass, build is delivered to staging environment
+8. **Deploy to Production** - Code is deployed where users can access it
 
-Thousands of plugins → can do almost anything
+![CI/CD Pipeline Flow](https://github.com/user-attachments/assets/d5e4254f-6e5e-4380-b201-a4f2c0bad4c1)
 
-Highly customizable, but complex to manage
+### Why CI/CD is Important
 
-Requires ongoing maintenance
+- **Fast Delivery** - Automating integration and deployment delivers features faster
+- **Improved Quality** - Continuous testing catches and fixes bugs early
+- **Reduced Risk** - Small incremental deployments mean errors can be dealt with on a smaller scale
+- **Better Collaboration** - Encourages teamwork as everyone's work is integrated frequently
 
-Best for: Advanced teams needing full control
+![CI/CD Benefits](https://github.com/user-attachments/assets/2618664e-8e06-4ce5-9c28-f03761190422)
 
-Memory tip: Powerful but high-maintenance
+---
 
-CircleCI
+## Popular CI/CD Tools
 
-Cloud-based and very fast
+### GitLab CI/CD
+- Built directly into GitLab
+- No extra tools needed if code is already on GitLab
+- Clean YAML pipelines
+- Strong default security and permissions
+- **Best for:** Teams fully committed to GitLab
 
-Easy setup with GitHub & Bitbucket
+### Jenkins
+- Open source and extremely powerful
+- Thousands of plugins - can do almost anything
+- Highly customizable but complex to manage
+- Requires ongoing maintenance
+- **Best for:** Advanced teams needing full control
 
-Minimal configuration
+### CircleCI
+- Cloud-based and very fast
+- Easy setup with GitHub & Bitbucket
+- Minimal configuration
+- **Best for:** Small teams that want speed
 
-Popular with startups
+### Travis CI
+- GitHub-first CI/CD tool
+- Simple configuration
+- "Just works" experience
+- Less flexible than Jenkins
+- **Best for:** Simple projects and quick pipelines
 
-Best for: Small teams that want speed
+### GitHub Actions
+- Built straight into GitHub
+- Uses workflow YAML files
+- Huge marketplace of actions
+- Excellent for open-source projects
+- **Best for:** GitHub-centric workflows
 
-Travis CI
+### Cloud Provider Native CI/CD
+- **AWS:** CodePipeline, CodeBuild, CodeDeploy
+- **Microsoft Azure:** Azure DevOps Pipelines
+- **Google Cloud Platform:** Cloud Build
+- Deep integration with cloud services
+- **Best for:** Teams already locked into one cloud provider
 
-GitHub-first CI/CD tool
+![CI/CD Tools](https://github.com/user-attachments/assets/c19c2bfe-c7ac-4bc6-9026-e2c51c310802)
 
-Simple configuration
+---
 
-“Just works” experience
+## Role of CI/CD in DevOps
 
-Less flexible than Jenkins
+CI/CD is a vital part of DevOps. The infinity loop represents the continuous nature of the process.
 
-Best for: Simple projects and quick pipelines
+### The DevOps Infinity Loop
 
-GitHub Actions
+**Continuous Integration (CI):**
+1. Developers write code and commit changes frequently to version control (GitHub, GitLab, etc.)
+2. Code is automatically built and compiled, ensuring dependencies are in place
+3. Automated tests run to verify code quality and catch bugs
 
-Built straight into GitHub
+**Continuous Deployment (CD):**
+4. Tested code is released to staging or production environment
+5. Application is deployed so users can access it
+6. Code is monitored for issues
+7. Feedback loops back to development
 
-Uses workflow YAML files
+![DevOps Infinity Loop](https://github.com/user-attachments/assets/957604e1-55e6-460f-9a89-82e153478837)
 
-Huge marketplace of actions
+### Benefits of CI/CD
 
-Excellent for open-source projects
+- **Collaboration** - Encourages better teamwork by integrating everyone's work and fostering responsibility
+- **Automation** - Automates builds, tests, and deployments, reducing manual errors and freeing up developer time
+- **Continuous Feedback** - Provides feedback at certain stages, alerting developers to bugs or issues
+- **Consistency** - Automated pipelines ensure consistent processes and eliminate "it works on my machine" problems
 
-Best for: GitHub-centric workflows
+---
 
-Memory tip: Code + CI in one place
+## CI/CD in DevOps Architecture
 
-Cloud Provider Native CI/CD
+### Stage Breakdown
 
-AWS → CodePipeline, CodeBuild, CodeDeploy
+#### 1. Source Control
+Where developers store and manage code using tools like GitHub, GitLab, etc.
+- Allows multiple developers to work on the same project without conflicts
+- Maintains a history of changes
+- Provides a clear line of collaboration
 
-Microsoft Azure → Azure DevOps Pipelines
+#### 2. CI/CD
+Where automation of testing, building, and deploying happens.
+- Ensures code changes are continuously integrated, tested, and deployed
 
-Google Cloud Platform → Cloud Build
+#### 3. Monitoring
+Continuously monitors the application to ensure it runs smoothly.
+- Tools: Prometheus, Grafana, ELK stack
+- Tracks code to find issues
+- Logs important events
+- Provides crucial feedback loop for stable maintenance
 
-Deep integration with their cloud services
+**Note:** You can always go back to previous stages when errors need to be fixed.
 
-Ideal for cloud-native architectures
+![DevOps Architecture](https://github.com/user-attachments/assets/7a4611f5-43d3-4b79-bbe1-f733f8948214)
 
-Best for: Teams already locked into one cloud
+---
 
-<img width="519" height="386" alt="image" src="https://github.com/user-attachments/assets/c19c2bfe-c7ac-4bc6-9026-e2c51c310802" />
+## GitHub Actions & CI/CD Workflow
 
-#Role of CI/CD in DevOps
-cicd is vital part of dev ops 
-explenation of the infinity 
-this is infinuity because its always continues 
-CI
-1st you have the continues intogration code build and test this means
-developers wirte code and commit changes frequently to the version control systems such as github git lab ect 
-code is autmatoilckly built and compiled correclty ensuring despendencies are in place
+### Workflow Process
 
-CD
-tested code is released onto a staging or prod enviroment
-application is deployed so users can access
-code is then moonitored
-then aautomated tests run to veryfy code had been updated and there is no bugs 
+1. **Write Code** - Fix bugs, develop features, etc.
+2. **Commit to Repo** - Commit triggers a GitHub Actions workflow
+3. **Workflow Definition** - Defined by a YAML file specifying actions to take on certain events
+4. **Pipeline Starts** - Workflow enters CI pipeline
+5. **Build** - Code is built and dependencies are installed
+6. **Test** - Tests check that new code works with current state and ensure no bugs
+7. **Check Test Outcome** - Crucial for maintaining code quality
+8. **Package** - When tests and build pass, create a new deployment of your application
 
-<img width="430" height="256" alt="image" src="https://github.com/user-attachments/assets/957604e1-55e6-460f-9a89-82e153478837" />
+![GitHub Actions Workflow](https://github.com/user-attachments/assets/a7f8afca-3bf5-4d75-9f5a-540c0070e3f9)
 
-benefits of cicd
-collaberation = encourages better colaberation among team members by intergrating each work and fosters responsibility
-automation = automate builds tests and deployment processes reducing manual errors and freeing up time for developers
-continues feedback = cicd provides continues feed back at certain stages which alert the dev of any bugs or issues 
-consistency = by using automated pipelines cicd ensures processes are cionsistant and takes out the it works on my machine problem 
+---
 
-#CI/CD in DevOps Architecture
-STAGE BREAK DOWN
-1ST source controll 
-thsi is where dev store and manage code tools with tools like github gitlab ect
-source control allows multiple developers to work in the same project without conflicts maintininng a history of changes and a line of colleaberaruon 
+## Use Cases for GitHub Actions
 
-2nd stage cicd
-this is where automation testing building and delpying process happens
-this stage ensures codge changes continuesly  are integrated tested  and deployed
+GitHub Actions can automate various aspects of development workflows:
 
-3rd stage mponitoring
-this stage involves continuesly monitoring the application to ensure it runs smoothly tools like prpomethies hrafana and elk are used for this
-they help treack code to find any issues and log impoertant evens 
+### Continuous Integration
+- Automatically builds and tests code every time it's pushed to the repo
+- Ensures code is in good shape and catches issues early
+- **Example:** Run unit tests on every pull request to ensure code doesn't break existing functionality
 
-this feedback loop is cruicial for stable mantencence 
+### Continuous Deployment
+- After tests pass, automatically deploy updates
+- Speeds up deployment by limiting manual intervention
+- **Example:** Deploy an application to a cloud service after all tests pass for quick, reliable releases
 
-you can aways go back to previous stagers for example when an error needs to be fixed 
-<img width="803" height="450" alt="image" src="https://github.com/user-attachments/assets/7a4611f5-43d3-4b79-bbe1-f733f8948214" />
+### Automation
+- Automate repetitive tasks in workflows
+- **Example:** Manage project board automation, such as moving tasks on a GitHub project board
 
-#Github Actions & CI/CD Workflow
-first you have your code you fix bugs develop ect
-seconnd you commit to repo the commit triggers a github actions workflow 
-The work flow is defined by a YAML file and it specifies what actions to take at certain events like commit 
-then the pipeline starts 
-work flow enters ci pipline 
-code is built and dependencies are installed
-code is tested the tets check that the new code works with the current state and ensure there are no bugs
-crucialy for  maintining code quality test outocme is checked
-code is packaged when test and build passes and makes a new deployment lof your application ect 
-<img width="750" height="442" alt="image" src="https://github.com/user-attachments/assets/a7f8afca-3bf5-4d75-9f5a-540c0070e3f9" />
+![GitHub Actions Use Cases](https://github.com/user-attachments/assets/0d80e746-f3a5-4e31-8d6e-0be082677d3c)
 
-# Use cases for Github Actions
-github actions is a tool that can automatate various aspects of dev work flow
-conitnues intergration = github actions can build and test code automaticly everytime its pushed to repo
-ennsures code is in good stage and works and that any issues are caugh early
-a real example is having a unit tests on every pull request to ensure code doesnt break exisiting functioinality 
-continues deployment = after tests are pass github actions can automatic cly deploy updates this speeds up deploying by limiting manual deployment 
-example is deploying an application on a cloud service and this can be set to after passing all tests for quick and reliable releases
-automation = github axtions can automate repetitive tasks in work flow 
-en example wopuld be managing project board automation such as moving tasks on a github prioject bourd 
- <img width="502" height="210" alt="image" src="https://github.com/user-attachments/assets/0d80e746-f3a5-4e31-8d6e-0be082677d3c" />
+---
 
-# Creating Github repo for CI/CD
+## Creating a GitHub Repo for CI/CD
 
-<img width="668" height="275" alt="image" src="https://github.com/user-attachments/assets/5a995271-4954-42a9-a1cd-6aac19a6c79e" />
+![GitHub Repo Setup](https://github.com/user-attachments/assets/5a995271-4954-42a9-a1cd-6aac19a6c79e)
 
-#Introduction to YAML Syntax
-YAML = YAML aint markup language used witha lot of dev ops tools
-YAML is a human readable data serialisation standard that is often used for config files
+---
 
-3 cocepts for yaml
-key-value pairs = basic building blocks of yaml written in format key: value eacmple name:age
-lists = sequences of items uses - to lists exampokne -item1,-item,-item3
-nbested elements = you can nest using indentation example parent: chiled:value
-<img width="809" height="411" alt="image" src="https://github.com/user-attachments/assets/9bbff666-1385-4459-ba72-b1a711735c78" />
+## Introduction to YAML Syntax
 
-# Introduction to YAML Syntax
-#key value pairs
+**YAML** = YAML Ain't Markup Language
+
+A human-readable data serialization standard often used for configuration files in DevOps tools.
+
+### Three Core Concepts
+
+#### 1. Key-Value Pairs
+Basic building blocks of YAML written as `key: value`
+
+```yaml
 name: iqzy
 age: 30
 job: dev
+```
 
-#lists
+#### 2. Lists
+Sequences of items using `-` to denote list items
+
+```yaml
 fruits:
-- apple
-- bamama
-- cherery
+  - apple
+  - banana
+  - cherry
+```
 
-#nested elements
+#### 3. Nested Elements
+Create hierarchies using indentation
+
+```yaml
 address:
-  street: 12 dowbning street
-  city: londin
-  country: uk 
+  street: 12 Downing Street
+  city: London
+  country: UK
+```
 
-  #pipe lines
-  work flow syntax and structure
+![YAML Syntax](https://github.com/user-attachments/assets/9bbff666-1385-4459-ba72-b1a711735c78)
 
-  name = name of yout work flow
-  trigger = on: triggers the work flow on any command for example push or pull request defines events that trigger work flow 
-  jobs = taks that run on the work flow 
-  uses build: and runs-on: 
-  runs-on: this is a environment where the work flow runs on and you can set an operating system like ubuntu-latest
-  steps: jobs are composed as steps each step runs as a command or actions. 
-  actions are reusable cod eythat can perform virety of task
-  <img width="791" height="449" alt="image" src="https://github.com/user-attachments/assets/1fbd3d4a-3091-458a-a087-987f5dd29548" />
+---
 
-#Events, jobs and steps
-events = actions that trihher workflows e.g push
-jobs independent tasks that run in parrallel or sequentially
-Each job runs on a virtual machine
+## Workflow Syntax and Structure
 
-steps: induvidual commands or actions executed in a job 
-steps run sequentially within a job
+### Key Components
 
-<img width="760" height="266" alt="image" src="https://github.com/user-attachments/assets/46ebd3bd-a3ee-48b3-ba2f-ad22d90d6612" />
+- **name:** Name of your workflow
+- **on:** Triggers the workflow on specific events (e.g., push, pull request)
+- **jobs:** Tasks that run in the workflow
+- **runs-on:** Environment where the workflow runs (e.g., `ubuntu-latest`)
+- **steps:** Jobs are composed of steps - each step runs a command or action
+- **actions:** Reusable code that can perform a variety of tasks
 
-# Build a simple CI Pipeline
-<img width="803" height="208" alt="image" src="https://github.com/user-attachments/assets/cdbe5661-0fcf-4dfe-a626-79e8fbf623c2" />
+![Workflow Structure](https://github.com/user-attachments/assets/1fbd3d4a-3091-458a-a087-987f5dd29548)
 
-#cicd demo 
+---
 
-heres an example of a pipeline 
-<img width="594" height="340" alt="image" src="https://github.com/user-attachments/assets/1600a837-c696-47d3-8918-679b6ea8e789" />
-after in github actions 
-<img width="647" height="675" alt="image" src="https://github.com/user-attachments/assets/b463d7ba-89c4-46c7-b3ed-98bd60aa9a94" />
+## Events, Jobs, and Steps
 
-# Advanced Github Actions
-# Using conditions and expressions
+### Events
+Actions that trigger workflows (e.g., push, pull request)
 
-conditions = allow you to control when a job or step should run based on cvertain criterias
-expesrrions = provide a way to performm calculations, manipulate trips and more withnna work flow file
+### Jobs
+- Independent tasks that run in parallel or sequentially
+- Each job runs on a virtual machine
 
-example
-<img width="701" height="284" alt="image" src="https://github.com/user-attachments/assets/b444648c-f526-4bf2-9348-577438ef7c1d" />
+### Steps
+- Individual commands or actions executed in a job
+- Steps run sequentially within a job
 
-#Matrix builds and parallel testing
-matrix builds allow you to run multiple job configs in parralel and the matrix strategy is how u can do it in github actions 
-usefull for tesing in different environments 
-<img width="381" height="361" alt="image" src="https://github.com/user-attachments/assets/3f38e586-9917-4c03-838f-f9415a18a677" />
+![Events, Jobs, Steps](https://github.com/user-attachments/assets/46ebd3bd-a3ee-48b3-ba2f-ad22d90d6612)
 
+---
 
+## Building a Simple CI Pipeline
 
+![Simple CI Pipeline](https://github.com/user-attachments/assets/cdbe5661-0fcf-4dfe-a626-79e8fbf623c2)
 
+### CI/CD Demo Example
 
+**Pipeline Configuration:**
 
+![Pipeline Example](https://github.com/user-attachments/assets/1600a837-c696-47d3-8918-679b6ea8e789)
 
+**In GitHub Actions:**
 
+![GitHub Actions Result](https://github.com/user-attachments/assets/b463d7ba-89c4-46c7-b3ed-98bd60aa9a94)
 
+---
 
+## Advanced GitHub Actions
+
+### Using Conditions and Expressions
+
+**Conditions:** Allow you to control when a job or step should run based on certain criteria
+
+**Expressions:** Provide a way to perform calculations, manipulate strings, and more within a workflow file
+
+![Conditions Example](https://github.com/user-attachments/assets/b444648c-f526-4bf2-9348-577438ef7c1d)
+
+### Matrix Builds and Parallel Testing
+
+Matrix builds allow you to run multiple job configurations in parallel using the matrix strategy in GitHub Actions.
+
+**Use case:** Testing across different environments simultaneously
+
+![Matrix Build Example](https://github.com/user-attachments/assets/3f38e586-9917-4c03-838f-f9415a18a677)
+
+---
+
+## Quick Reference
+
+### CI/CD Benefits Summary
+✅ Faster delivery of features  
+✅ Improved code quality  
+✅ Reduced deployment risk  
+✅ Better team collaboration  
+✅ Automated testing and deployment  
+✅ Consistent processes
+
+### Remember
+- Keep commits small and frequent
+- Write comprehensive tests
+- Monitor your pipelines
+- Use appropriate CI/CD tools for your team size
+- Automate everything you can
