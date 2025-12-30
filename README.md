@@ -223,8 +223,17 @@ address:
   <img width="791" height="449" alt="image" src="https://github.com/user-attachments/assets/1fbd3d4a-3091-458a-a087-987f5dd29548" />
 
 #Events, jobs and steps
+events = actions that trihher workflows e.g push
+jobs independent tasks that run in parrallel or sequentially
+Each job runs on a virtual machine
 
+steps: induvidual commands or actions executed in a job 
+steps run sequentially within a job
 
+<img width="760" height="266" alt="image" src="https://github.com/user-attachments/assets/46ebd3bd-a3ee-48b3-ba2f-ad22d90d6612" />
+
+# Build a simple CI Pipeline
+<img width="803" height="208" alt="image" src="https://github.com/user-attachments/assets/cdbe5661-0fcf-4dfe-a626-79e8fbf623c2" />
 
 
 
