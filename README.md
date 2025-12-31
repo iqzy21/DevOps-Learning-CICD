@@ -313,5 +313,34 @@ by using a echo function  as shown in the immage
 or a environment
 <img width="672" height="250" alt="image" src="https://github.com/user-attachments/assets/dd95f78d-2a1f-48bb-8bf6-0bce1c0a8bee" />
 
+#Reusable CI/CD
+#Creating customs actions
+custom actions are a way to automate parts of yourwork flow that are project specific 
+they are reuasble peices fo code that automate specific tasjs in your CICD pipeline
+3 types of actions 
+javascript actions actions that use node js to run javascript code
+docker actions for containers 
+composite actions which are pieces that are reusable
 
+cresating a cutom action 
+create a repo to host custom axtion 
+defien action meta data in an action.yml file
+for example a javascript action would be writteen in a index.js  file
+docker action would be wrotten in a docker file 
+and composite actions would just use standard yaml
+
+then you can publish action to github market place for open source use 
+<img width="399" height="259" alt="image" src="https://github.com/user-attachments/assets/0ec36591-87ca-40d2-910b-4762eb33e486" />
+<img width="329" height="243" alt="image" src="https://github.com/user-attachments/assets/e46a6fd3-05d0-4c86-bbf3-b09a74db47b7" />
+
+#Sharing and reusing actions in diff projects
+advantage if cusrtom action is being able to re use them it saves time and ensures consitancy across your pipelines 
+
+reuasable actions help maintains consistancy across different reposetories as it has a standardised CICD ensuring processes and steps arew the same 
+reduces error likley hood
+
+reuasables help with effeciancy instead of rewiring actions you can re use the same one to save tiome 
+
+example image 
+<img width="344" height="337" alt="image" src="https://github.com/user-attachments/assets/c56cd078-55d3-4cd2-99b9-c7865499053e" />
 
