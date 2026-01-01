@@ -344,3 +344,26 @@ reuasables help with effeciancy instead of rewiring actions you can re use the s
 example image 
 <img width="344" height="337" alt="image" src="https://github.com/user-attachments/assets/c56cd078-55d3-4cd2-99b9-c7865499053e" />
 
+cicd in the real world
+
+# Automated testing and linting
+liting is a process to analyse codde for potential errors and enforcing coding standards its liek havinga spell checker for your code checks for syntax bugs ect
+benefits
+you mainain code quality ensure code ahdiers to cioding standars making it easy to read and maintain
+you can catch syntax errors early beforee they ebcome bigger probvlems
+automated tests run autiomaticly on your code base to ensure irt works as expected 
+tools for linting ESlint for javascript and pilot for python
+benefits 
+you can detect issues early such as bugs early in the dev process
+it ensures code quality by consitantly running tests it ensures your code is relianable 
+tools for automated testing you have j unit and py test jest and moicha 
+<img width="855" height="455" alt="image" src="https://github.com/user-attachments/assets/fc481f2b-fe5f-4a2a-8dea-856c7bcc1ff4" />
+
+#Deploying to different environments
+environment types
+whe working in an environment 3 or 4 of them are deployed development staging and production
+development is where all the bulding and experementing happens it can be messy but that what development is about 
+staging is a stable environment that mirrors production as closley as possible this is where final testing is done to catch final issues that got through deve;lopment
+production is the live environemwnrt wherer the app is accessable to users this should be done cairuiflly and automated to avoid human error
+
+deployment strategies
