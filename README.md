@@ -366,4 +366,48 @@ development is where all the bulding and experementing happens it can be messy b
 staging is a stable environment that mirrors production as closley as possible this is where final testing is done to catch final issues that got through deve;lopment
 production is the live environemwnrt wherer the app is accessable to users this should be done cairuiflly and automated to avoid human error
 
-deployment strategies
+deployment strategies 
+2 types 
+manual - moving code from 1 environment to another straight forward but prone to human erro and time consuiming 
+automated -  where CICD shines uses scripts and tools to move code from 1 environment to anotther faster and more reliable liek a convair belt
+cloud base tools to manage deploymentrs
+AWS - EC2/ECS/EKS/lambda
+AZURE - AKS/ app service 
+GCP - cloud run/gke cloud functions/ app engine 
+<img width="739" height="311" alt="image" src="https://github.com/user-attachments/assets/514608dd-37cc-4075-9cd5-5a206c021f09" />
+
+# Security in CI/CD
+as WORKFLOWS ARE AUTOMETED SECURITY IS NEED to protect cidee and data
+BEST PRACTES 
+secure secres such as API keys passwords and more use secrets in githuboir any other tool make sure its protected and not public in your code base
+control access - control who has access to your repos and work dlows use permissions and role based access controll so the person witbh access can only do that 1 tasjk prevent accidental access
+scan for vunrabilities - use tools like dependabot, snic or aother security cscanners that integrate with cicd pipe line by identify vunrabilities early yopu reduct a risk of securit breach
+audit and monitor pipe lones for any unusual activity set notification for an changes inm your pipeline
+<img width="712" height="310" alt="image" src="https://github.com/user-attachments/assets/08001817-77c6-4302-b160-5dcf86964dd3" />
+
+#Debugging workflow failures
+common for pipe line to dfail 
+common isues 
+failed test = it coild be your tets coukd gave faled for any reason look at ur code
+dependency errors = these occure when when yiurt project relies on external libraries and packages that have conflicts and are not installed correctly
+cobnfig werros = happewns wherre theres syntax errors like missing a space or indentatuon
+permission issues = happes whern you dont have permission for a repositiry like accesuinfg secrets
+
+solutins 
+review loghs = logs give u more detaul a dninformation about the issue
+re-run jobs = can deterimine if the falure was a fluke or a constant problkem 
+update dependencies = ensure dependancies are up to dayte this can solve conflicts and compatability issues 
+check config = make sure env variables and secrets are correctly set 
+<img width="722" height="362" alt="image" src="https://github.com/user-attachments/assets/331864b4-bc08-4d15-a9d5-84501d8b4500" />
+
+#Manual Triggers and Github actions
+manual triggers allow wrok flows rto be started manually via github actions ui
+
+used for certain deployments 
+if you want to trigegr  deployments to various environments liek staging prod on diff times then you would use this 
+for maintenence jobs such as data ,migration or data base back up you have this even for on demand jobs aswell 
+
+example image 
+in the immage you have the CI and as you can see after push there is manual commands for a dev to choose on what workflow to trigger and tets
+
+<img width="434" height="390" alt="image" src="https://github.com/user-attachments/assets/69cb0bde-6040-46d0-94c8-2ca637ea791c" />
