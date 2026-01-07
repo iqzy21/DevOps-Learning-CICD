@@ -1,0 +1,14 @@
+name: task_1_pipeline
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkout_into_repo
+        uses: actions/checkout@v2
+
+      - name: test_past
+        run: echo "hello user"
